@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ParallaxSection from "./ParallaxSection";
+import Contact from "./Contact";
 
 export interface Service {
   icon: React.ReactNode;
@@ -48,6 +49,9 @@ const Services = ({ services }: ServicesProps) => {
                   </p>
                 </motion.div>
               ))}
+            </div>
+            <div className="mt-16">
+              <Contact />
             </div>
           </div>
         </div>

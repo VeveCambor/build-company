@@ -2,7 +2,11 @@
 import React from "react";
 import Image from "next/image";
 
-const Hero = () => {
+interface HeroProps {
+  onGetOffer?: () => void;
+}
+
+const Hero = ({ onGetOffer }: HeroProps) => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
 
@@ -24,7 +28,10 @@ const Hero = () => {
         <p className="text-lg sm:text-xl md:text-2xl text-secondary mb-8">
           Od demolácie po vzduchotechniku
         </p>
-        <button className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white font-bold py-4 px-10 rounded-full transition-colors shadow-lg cursor-pointer text-lg">
+        <button
+          className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white font-bold py-4 px-10 rounded-full transition-colors shadow-lg cursor-pointer text-lg"
+          onClick={onGetOffer}
+        >
           Získať ponuku
         </button>
       </div>
