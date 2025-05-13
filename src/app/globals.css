@@ -76,6 +76,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --font-heading: 'Poppins', sans-serif;
+  --font-sans: 'Inter', sans-serif;
 }
 
 .dark {
@@ -116,7 +118,24 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Animace pro scroll-indicator a další efekty */
+@keyframes scroll-indicator {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+}
+
+.scroll-indicator {
+  animation: scroll-indicator 1.2s infinite;
 }
