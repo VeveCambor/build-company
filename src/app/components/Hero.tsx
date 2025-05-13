@@ -29,7 +29,7 @@ const Hero = ({ onGetOffer }: HeroProps) => {
           Od demolácie po vzduchotechniku
         </p>
         <button
-          className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white font-bold py-4 px-10 rounded-full transition-colors shadow-lg cursor-pointer text-lg"
+          className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-extrabold py-5 px-14 rounded-full transition-transform duration-200 shadow-2xl cursor-pointer text-xl focus:outline-none focus:ring-4 focus:ring-yellow-300 hover:scale-105"
           onClick={onGetOffer}
         >
           Získať ponuku
