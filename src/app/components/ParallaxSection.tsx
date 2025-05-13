@@ -11,7 +11,7 @@ export interface ParallaxSectionProps {
 
 const ParallaxSection = ({ bgImage, overlayColor = "rgba(0,0,0,0.5)", children }: ParallaxSectionProps) => {
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
 
   return (
     <section className="relative h-screen snap-start overflow-hidden">
@@ -33,7 +33,7 @@ const ParallaxSection = ({ bgImage, overlayColor = "rgba(0,0,0,0.5)", children }
           />
         </motion.div>
       )}
-      <div className="relative z-10 h-full flex items-center py-12 md:py-20">
+      <div className="relative z-10 h-full py-12 md:py-20">
         {children}
       </div>
     </section>

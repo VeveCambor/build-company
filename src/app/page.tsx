@@ -4,6 +4,7 @@ import WhyUs from "./components/WhyUs";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Modal from "./components/Modal";
+import Footer from "./components/Footer";
 import { FaFan, FaTractor } from "react-icons/fa";
 import { GiWreckingBall, GiBrickWall } from "react-icons/gi";
 import { useState } from "react";
@@ -47,6 +48,7 @@ export default function Home() {
       <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
         <Contact />
       </Modal>
+      <Footer />
     </>
   );
 }

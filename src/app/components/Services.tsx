@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ParallaxSection from "./ParallaxSection";
-import Contact from "./Contact";
+import ReferenceCarousel from "./ReferenceCarousel";
 
 export interface Service {
   icon: React.ReactNode;
@@ -17,17 +17,16 @@ export interface ServicesProps {
 const Services = ({ services }: ServicesProps) => {
   return (
     <ParallaxSection 
-      bgImage="/images/services-bg.jpg" 
       overlayColor="rgba(0,0,0,0.5)"
     >
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full min-h-[50vh]">
         <div className="absolute inset-0 pointer-events-none bg-black/80 z-10" />
-        <div className="container mx-auto px-4 h-full flex items-center relative z-20">
+        <div className="container mx-auto px-4 h-full relative z-20">
           <div className="w-full">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-white text-center pt-0 md:pt-2">
               Naše služby
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 pb-4 md:pb-8">
               {services.map((service, idx) => (
                 <motion.div
                   key={idx}
@@ -38,7 +37,7 @@ const Services = ({ services }: ServicesProps) => {
                   }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="text-accent mb-4">
+                  <div className="flex justify-center mb-4">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">
@@ -50,8 +49,8 @@ const Services = ({ services }: ServicesProps) => {
                 </motion.div>
               ))}
             </div>
-            <div className="mt-16">
-              <Contact />
+            <div className="mb-20 md:mb-24">
+              <ReferenceCarousel />
             </div>
           </div>
         </div>
