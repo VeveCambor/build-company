@@ -12,24 +12,24 @@ export default function Home() {
 
   const services = [
     {
-      icon: <FaHammer className="w-8 h-8" />,
-      title: "Demolice",
-      description: "Kompletní demolice budov a konstrukcí s důrazem na bezpečnost a ekologickou likvidaci materiálu."
+      icon: <FaHammer className="w-10 h-10 text-yellow-400 mx-auto" />,
+      title: "Demolácie",
+      description: "Kompletné demolácie budov a konštrukcií s dôrazom na bezpečnosť a ekologickú likvidáciu materiálu."
     },
     {
-      icon: <FaTruck className="w-8 h-8" />,
+      icon: <FaTruck className="w-10 h-10 text-yellow-400 mx-auto" />,
       title: "Výkopové práce",
-      description: "Výkopové práce všech rozměrů, včetně zemních prací a terénních úprav."
+      description: "Výkopové práce všetkých rozmerov, vrátane zemných prác a terénnych úprav."
     },
     {
-      icon: <FaTools className="w-8 h-8" />,
-      title: "Zednické práce",
-      description: "Komplexní zednické práce od základů až po finální úpravy, včetně rekonstrukcí."
+      icon: <FaTools className="w-10 h-10 text-yellow-400 mx-auto" />,
+      title: "Murárske práce",
+      description: "Komplexné murárske práce od základov až po finálne úpravy, vrátane rekonštrukcií."
     },
     {
-      icon: <FaFan className="w-8 h-8" />,
+      icon: <FaFan className="w-10 h-10 text-yellow-400 mx-auto" />,
       title: "Vzduchotechnika",
-      description: "Návrh, instalace a údržba vzduchotechnických systémů pro komerční i průmyslové objekty."
+      description: "Návrh, montáž a údržba vzduchotechnických systémov pre komerčné aj priemyselné objekty."
     }
   ];
 
