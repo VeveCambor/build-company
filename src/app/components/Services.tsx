@@ -30,16 +30,17 @@ const Services = ({ services }: ServicesProps) => {
               {services.map((service, idx) => (
                 <motion.div
                   key={idx}
-                  className="relative bg-white/10 backdrop-blur-sm rounded-lg p-6 border-t-4 border-primary cursor-pointer shadow-lg"
-                  whileHover={{ 
-                    scale: 1.05,
-                    boxShadow: "0 10px 30px rgba(0,0,0,0.2)"
-                  }}
-                  transition={{ duration: 0.2 }}
+                  className="relative bg-white/10 backdrop-blur-sm rounded-lg p-6 border-t-4 border-primary cursor-pointer shadow-lg group"
+                  whileHover={{ scale: 1.08, boxShadow: "0 16px 40px rgba(0,0,0,0.35)" }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
-                  <div className="flex justify-center mb-4">
+                  <motion.div
+                    className="flex justify-center mb-4"
+                    whileHover={{ rotate: -8 }}
+                    transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                  >
                     {service.icon}
-                  </div>
+                  </motion.div>
                   <h3 className="text-xl font-bold text-white mb-2">
                     {service.title}
                   </h3>
