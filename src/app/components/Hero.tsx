@@ -14,7 +14,7 @@ const Hero = () => {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[rgba(224,224,224,0.6)]" />
+        <div className="absolute inset-0 bg-[rgba(0,0,0,0.55)]" />
       </div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
@@ -24,7 +24,7 @@ const Hero = () => {
         <p className="text-lg sm:text-xl md:text-2xl text-secondary mb-8">
           Od demolácie po vzduchotechniku
         </p>
-        <button className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full transition-colors">
+        <button className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white font-bold py-4 px-10 rounded-full transition-colors shadow-lg cursor-pointer text-lg">
           Získať ponuku
         </button>
       </div>

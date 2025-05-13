@@ -130,7 +130,7 @@
   }
 }
 
-/* Animace pro scroll-indicator a další efekty */
+/* Animace */
 @keyframes scroll-indicator {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(12px); }

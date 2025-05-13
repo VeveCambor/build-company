@@ -1,19 +1,8 @@
 import type { Metadata } from "next";
-import { Poppins, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["700"],
-  variable: "--font-heading",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Stavební firma | Komplexní stavební řešení",
@@ -27,11 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="cs">
-      <body
-        className={`${poppins.variable} ${inter.variable} antialiased font-sans`}
-      >
-        {children}
-      </body>
+      <body className={`${inter.className} bg-black text-white`}>{children}</body>
     </html>
   );
 }

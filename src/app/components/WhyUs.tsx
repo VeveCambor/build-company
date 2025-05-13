@@ -8,10 +8,20 @@ export interface WhyUsProps {
 
 const WhyUs = ({ title, text }: WhyUsProps) => {
   return (
-    <ParallaxSection>
-      {/* Nadpis, text, žlutý akcent */}
-      <h2>{title}</h2>
-      <p>{text}</p>
+    <ParallaxSection 
+      bgImage="/images/whyus.jpg" 
+      overlayColor="rgba(0,0,0,0.7)"
+    >
+      <div className="container mx-auto px-4 h-full flex items-center">
+        <div className="max-w-2xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-accent">
+            {title}
+          </h2>
+          <p className="text-lg md:text-xl text-white leading-relaxed">
+            {text}
+          </p>
+        </div>
+      </div>
     </ParallaxSection>
   );
 };
