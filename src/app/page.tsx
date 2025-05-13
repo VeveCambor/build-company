@@ -4,7 +4,8 @@ import WhyUs from "./components/WhyUs";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Modal from "./components/Modal";
-import { FaHammer, FaTruck, FaTools, FaFan } from "react-icons/fa";
+import { FaFan, FaTractor } from "react-icons/fa";
+import { GiWreckingBall, GiBrickWall } from "react-icons/gi";
 import { useState } from "react";
 
 export default function Home() {
@@ -12,17 +13,17 @@ export default function Home() {
 
   const services = [
     {
-      icon: <FaHammer className="w-10 h-10 text-yellow-400 mx-auto" />,
+      icon: <GiWreckingBall className="w-10 h-10 text-yellow-400 mx-auto" />,
       title: "Demolácie",
       description: "Kompletné demolácie budov a konštrukcií s dôrazom na bezpečnosť a ekologickú likvidáciu materiálu."
     },
     {
-      icon: <FaTruck className="w-10 h-10 text-yellow-400 mx-auto" />,
+      icon: <FaTractor className="w-10 h-10 text-yellow-400 mx-auto" />,
       title: "Výkopové práce",
       description: "Výkopové práce všetkých rozmerov, vrátane zemných prác a terénnych úprav."
     },
     {
-      icon: <FaTools className="w-10 h-10 text-yellow-400 mx-auto" />,
+      icon: <GiBrickWall className="w-10 h-10 text-yellow-400 mx-auto" />,
       title: "Murárske práce",
       description: "Komplexné murárske práce od základov až po finálne úpravy, vrátane rekonštrukcií."
     },
