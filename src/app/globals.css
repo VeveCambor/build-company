@@ -139,3 +139,12 @@
 .scroll-indicator {
   animation: scroll-indicator 1.2s infinite;
 }
+
+@keyframes crane-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-crane {
+  animation: crane-bounce 2.5s ease-in-out infinite;
+}

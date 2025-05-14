@@ -50,6 +50,27 @@ const Services = ({ services }: ServicesProps) => {
                 </motion.div>
               ))}
             </div>
+            <div className="pointer-events-none select-none fixed right-0 bottom-8 w-[220px] md:w-[340px] z-10">
+              <svg
+                viewBox="0 0 320 140"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-full h-auto animate-crane"
+              >
+                {/* Pás */}
+                <rect x="75" y="120" width="100" height="16" rx="9" fill="#FFD600" stroke="#222" strokeWidth="10" />
+                {/* Karoserie */}
+                <rect x="90" y="85" width="80" height="30" rx="8" fill="#FFD600" stroke="#222" strokeWidth="4" />
+                {/* Kabina */}
+                <rect x="90" y="55" width="45" height="35" rx="8" fill="#FFD600" stroke="#222" strokeWidth="4" />
+                <rect x="92" y="60" width="30" height="25" rx="4" fill="#fff" stroke="#222" strokeWidth="2" />
+                {/* Rameno */}
+                <rect x="150" y="20" width="14" height="65" rx="6" fill="#FFD600" stroke="#222" strokeWidth="4" transform="rotate(-25 180 60)" />
+                {/* Lžíce */}
+                <ellipse cx="160" cy="30" rx="14" ry="8" fill="#FFD600" stroke="#222" strokeWidth="4" />
+                <ellipse cx="160" cy="30" rx="7" ry="4" fill="#222" />
+              </svg>
+            </div>
             <div className="mb-20 md:mb-24">
               <ReferenceCarousel />
             </div>
