@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
@@ -11,10 +11,26 @@ export interface ParallaxSectionProps {
 
 const ParallaxSection = ({ bgImage, overlayColor = "rgba(0,0,0,0.5)", children }: ParallaxSectionProps) => {
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkIsMobile);
+    };
+  }, []);
+
+  // Snížený efekt paralaxu na mobilních zařízeních
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", isMobile ? "20%" : "40%"]);
 
   return (
-    <section className="relative h-screen snap-start overflow-hidden">
+    <section className="relative min-h-screen h-auto snap-start overflow-hidden">
       {bgImage && (
         <motion.div 
           className="absolute inset-0 z-0"
@@ -33,7 +49,7 @@ const ParallaxSection = ({ bgImage, overlayColor = "rgba(0,0,0,0.5)", children }
           />
         </motion.div>
       )}
-      <div className="relative z-10 h-full py-12 md:py-20">
+      <div className="relative z-10 h-full py-12 sm:py-16 md:py-24 lg:py-32">
         {children}
       </div>
     </section>

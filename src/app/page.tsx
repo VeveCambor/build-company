@@ -5,8 +5,8 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Modal from "./components/Modal";
 import Footer from "./components/Footer";
-import { FaFan, FaTractor } from "react-icons/fa";
-import { GiWreckingBall, GiBrickWall } from "react-icons/gi";
+import { FaFan } from "react-icons/fa";
+import { GiWreckingBall, GiBrickWall, GiDigDug } from "react-icons/gi";
 import { useState } from "react";
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
       description: "Kompletné demolácie budov a konštrukcií s dôrazom na bezpečnosť a ekologickú likvidáciu materiálu."
     },
     {
-      icon: <FaTractor className="w-10 h-10 text-yellow-400 mx-auto" />,
+      icon: <GiDigDug className="w-10 h-10 text-yellow-400 mx-auto" />,
       title: "Výkopové práce",
       description: "Výkopové práce všetkých rozmerov, vrátane zemných prác a terénnych úprav."
     },

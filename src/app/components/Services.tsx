@@ -17,11 +17,12 @@ export interface ServicesProps {
 const Services = ({ services }: ServicesProps) => {
   return (
     <ParallaxSection 
-      overlayColor="rgba(0,0,0,0.5)"
+      overlayColor="rgba(0,0,0,0.1)"
+      bgImage="/images/dark-gray-stone-wall.jpg"
     >
       <div className="relative w-full min-h-[50vh]">
         <div className="absolute inset-0 pointer-events-none bg-black/80 z-10" />
-        <div className="container mx-auto px-4 h-full relative z-20">
+        <div className="container mx-auto px-4 h-full pb-40 sm:pb-32 md:pb-16 relative z-20">
           <div className="w-full">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-white text-center pt-0 md:pt-2">
               Naše služby
@@ -50,7 +51,7 @@ const Services = ({ services }: ServicesProps) => {
                 </motion.div>
               ))}
             </div>
-            <div className="pointer-events-none select-none fixed right-0 bottom-8 w-[220px] md:w-[340px] z-10">
+            <div className="pointer-events-none select-none fixed right-0 bottom-8 hidden sm:block w-[220px] md:w-[340px] z-10">
               <svg
                 viewBox="0 0 320 140"
                 fill="none"
@@ -71,7 +72,7 @@ const Services = ({ services }: ServicesProps) => {
                 <ellipse cx="150" cy="25" rx="10" ry="6" fill="#222" />
               </svg>
             </div>
-            <div className="mb-20 md:mb-24">
+            <div className="mb-32 md:mb-24">
               <ReferenceCarousel />
             </div>
           </div>
