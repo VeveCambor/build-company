@@ -8,9 +8,16 @@ import Footer from "./components/Footer";
 import { FaFan } from "react-icons/fa";
 import { GiWreckingBall, GiBrickWall, GiDigDug } from "react-icons/gi";
 import { useState } from "react";
+import { usePrefetchImages } from "./hooks/usePrefetchImages";
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
+  
+  usePrefetchImages([
+    "/images/hero-bg.jpg",
+    "/images/whyus.jpg",
+    "/images/dark-gray-stone-wall.jpg"
+  ]);
 
   const services = [
     {

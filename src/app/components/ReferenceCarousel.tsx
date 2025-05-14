@@ -1,22 +1,26 @@
 "use client";
 import React, { useState } from "react";
 import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { usePrefetchImages } from "../hooks/usePrefetchImages";
 
 const references = [
   {
     name: "Ján Novák",
     text: "S firmou Mokosh sme boli maximálne spokojní. Práce boli vykonané rýchlo, kvalitne a podľa dohody.",
-    rating: 5
+    rating: 5,
+    image: "/images/references/reference1.jpg"
   },
   {
     name: "Petra Kováčová",
     text: "Profesionálny prístup, výborná komunikácia a skvelý výsledok. Určite odporúčam!",
-    rating: 5
+    rating: 5,
+    image: "/images/references/reference2.jpg"
   },
   {
     name: "Miroslav Horváth",
     text: "Stavebné práce prebehli bez problémov, všetko bolo hotové načas. Ďakujeme!",
-    rating: 4
+    rating: 4,
+    image: "/images/references/reference3.jpg"
   }
 ];
 
@@ -25,6 +29,8 @@ const ReferenceCarousel = () => {
   const prev = () => setIndex((i) => (i === 0 ? references.length - 1 : i - 1));
   const next = () => setIndex((i) => (i === references.length - 1 ? 0 : i + 1));
   const ref = references[index];
+  
+  usePrefetchImages(references.map(ref => ref.image));
 
   return (
     <section className="w-full py-16 pb-44 sm:pb-40 md:pb-32">
