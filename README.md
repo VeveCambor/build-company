@@ -2,6 +2,9 @@
 
 Moderní webová prezentace pro stavební firmu. Vytvořeno pomocí Next.js 14, React 19, TypeScript a Tailwind CSS.
 
+Odkaz na Vercel:
+https://build-company-lilac.vercel.app/
+
 ## Funkce
 
 - Responzivní design optimalizovaný pro mobilní zařízení i desktopy
