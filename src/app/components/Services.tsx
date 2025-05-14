@@ -31,8 +31,12 @@ const Services = ({ services }: ServicesProps) => {
               {services.map((service, idx) => (
                 <motion.div
                   key={idx}
-                  className="relative bg-white/10 backdrop-blur-sm rounded-lg p-6 cursor-pointer shadow-lg group"
-                  whileHover={{ scale: 1.08, boxShadow: "0 16px 40px rgba(0,0,0,0.35)" }}
+                  className="relative bg-white/10 backdrop-blur-sm rounded-lg p-6 cursor-pointer shadow-lg group transition-all duration-300"
+                  whileHover={{ 
+                    scale: 1.05, 
+                    boxShadow: "0 16px 40px rgba(0,0,0,0.35)",
+                    border: "1px solid #FFD600" 
+                  }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
                   <motion.div
