@@ -41,7 +41,7 @@ const Services = ({ services }: ServicesProps) => {
                   <div className="relative group h-full">
                     {/* Vnější container s group hover */}
                     <motion.div
-                      className="relative bg-white/10 backdrop-blur-sm rounded-lg p-6 cursor-pointer shadow-lg transition-all duration-300 h-full"
+                      className="relative bg-white/10 backdrop-blur-sm rounded-lg p-6 cursor-pointer shadow-lg transition-all duration-300 h-full flex flex-col"
                       whileHover={{ 
                         scale: 1.05, 
                         boxShadow: "0 16px 40px rgba(0,0,0,0.35)"
@@ -66,7 +66,7 @@ const Services = ({ services }: ServicesProps) => {
                       <h3 className="text-xl font-bold text-white mb-2 relative z-10">
                         {service.title}
                       </h3>
-                      <p className="text-white/80 relative z-10">
+                      <p className="text-white/80 relative z-10 flex-1">
                         {service.description}
                       </p>
                     </motion.div>
