@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ParallaxSection from "./ParallaxSection";
 import ReferenceCarousel from "./ReferenceCarousel";
+import AnimatedElement from "./AnimatedElement";
 
 export interface Service {
   icon: React.ReactNode;
@@ -24,35 +25,53 @@ const Services = ({ services }: ServicesProps) => {
         <div className="absolute inset-0 pointer-events-none bg-black/80 z-10" />
         <div className="container mx-auto px-4 h-full pb-40 sm:pb-32 md:pb-16 relative z-20">
           <div className="w-full">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-white text-center pt-0 md:pt-2">
-              Naše služby
-            </h2>
+            <AnimatedElement animation="slideUp">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-white text-center pt-0 md:pt-2">
+                Naše služby
+              </h2>
+            </AnimatedElement>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 pb-4 md:pb-8">
               {services.map((service, idx) => (
-                <motion.div
-                  key={idx}
-                  className="relative bg-white/10 backdrop-blur-sm rounded-lg p-6 cursor-pointer shadow-lg group transition-all duration-300"
-                  whileHover={{ 
-                    scale: 1.05, 
-                    boxShadow: "0 16px 40px rgba(0,0,0,0.35)",
-                    border: "1px solid #FFD600" 
-                  }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                <AnimatedElement 
+                  key={idx} 
+                  animation="zoom"
+                  delay={250 * idx}
                 >
-                  <motion.div
-                    className="flex justify-center mb-4"
-                    whileHover={{ rotate: -8 }}
-                    transition={{ type: "spring", stiffness: 200, damping: 10 }}
-                  >
-                    {service.icon}
-                  </motion.div>
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-white/80">
-                    {service.description}
-                  </p>
-                </motion.div>
+                  <div className="relative group">
+                    {/* Vnější container s group hover */}
+                    <motion.div
+                      className="relative bg-white/10 backdrop-blur-sm rounded-lg p-6 cursor-pointer shadow-lg transition-all duration-300 h-full"
+                      whileHover={{ 
+                        scale: 1.05, 
+                        boxShadow: "0 16px 40px rgba(0,0,0,0.35)"
+                      }}
+                      transition={{ 
+                        type: "spring", 
+                        stiffness: 300, 
+                        damping: 20 
+                      }}
+                    >
+                      {/* Border element který reaguje na group hover */}
+                      <div className="absolute inset-0 rounded-lg border border-transparent transition-colors duration-200 group-hover:border-yellow-400"></div>
+                      
+                      <motion.div
+                        className="flex justify-center mb-4 relative z-10"
+                        whileHover={{ rotate: -8 }}
+                        transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                      >
+                        {service.icon}
+                      </motion.div>
+
+                      <h3 className="text-xl font-bold text-white mb-2 relative z-10">
+                        {service.title}
+                      </h3>
+                      <p className="text-white/80 relative z-10">
+                        {service.description}
+                      </p>
+                    </motion.div>
+                  </div>
+                </AnimatedElement>
               ))}
             </div>
             <div className="pointer-events-none select-none fixed right-0 bottom-8 hidden sm:block w-[220px] md:w-[340px] z-10">
@@ -76,9 +95,11 @@ const Services = ({ services }: ServicesProps) => {
                 <ellipse cx="150" cy="25" rx="10" ry="6" fill="#222" />
               </svg>
             </div>
-            <div className="mb-32 md:mb-24">
-              <ReferenceCarousel />
-            </div>
+            <AnimatedElement animation="slideUp" delay={800}>
+              <div className="mb-32 md:mb-24">
+                <ReferenceCarousel />
+              </div>
+            </AnimatedElement>
           </div>
         </div>
       </div>
