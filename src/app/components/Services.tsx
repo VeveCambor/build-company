@@ -31,14 +31,14 @@ const Services = ({ services }: ServicesProps) => {
               </h2>
             </AnimatedElement>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 pb-4 md:pb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 pb-4 md:pb-8 items-stretch">
               {services.map((service, idx) => (
                 <AnimatedElement 
                   key={idx} 
                   animation="zoom"
                   delay={250 * idx}
                 >
-                  <div className="relative group">
+                  <div className="relative group h-full">
                     {/* Vnější container s group hover */}
                     <motion.div
                       className="relative bg-white/10 backdrop-blur-sm rounded-lg p-6 cursor-pointer shadow-lg transition-all duration-300 h-full"
@@ -52,6 +52,7 @@ const Services = ({ services }: ServicesProps) => {
                         damping: 20 
                       }}
                     >
+                      {/* Border element který reaguje na group hover */}
                       <div className="absolute inset-0 rounded-lg border border-transparent transition-colors duration-200 group-hover:border-yellow-400"></div>
                       
                       <motion.div
