@@ -11,7 +11,6 @@ interface AnimatedElementProps {
   duration?: number;
 }
 
-// Jemnější animace s pozvolnějšími přechody
 const animations = {
   fadeIn: {
     hidden: { opacity: 0 },

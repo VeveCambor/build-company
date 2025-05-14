@@ -17,23 +17,19 @@ export const useScrollAnimation = (
     const element = elementRef.current;
     if (!element) return;
 
-    // Použijeme větší rootMargin, aby animace začala dříve
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Přidáme zpoždění pro plynulejší animace prvků
           if (delay > 0) {
             setTimeout(() => {
               setIsVisible(true);
             }, delay);
           } else {
-            // Pro prvky bez zpoždění, abychom předešli zaseknutí
             requestAnimationFrame(() => {
               setIsVisible(true);
             });
           }
           
-          // Po zobrazení prvku už nepotřebujeme dále sledovat
           observer.unobserve(element);
         }
       },

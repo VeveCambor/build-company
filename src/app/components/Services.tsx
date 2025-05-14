@@ -52,7 +52,6 @@ const Services = ({ services }: ServicesProps) => {
                         damping: 20 
                       }}
                     >
-                      {/* Border element který reaguje na group hover */}
                       <div className="absolute inset-0 rounded-lg border border-transparent transition-colors duration-200 group-hover:border-yellow-400"></div>
                       
                       <motion.div
