@@ -65,10 +65,10 @@ const Services = ({ services }: ServicesProps) => {
                 <rect x="90" y="55" width="45" height="35" rx="8" fill="#FFD600" stroke="#222" strokeWidth="4" />
                 <rect x="92" y="60" width="30" height="25" rx="4" fill="#fff" stroke="#222" strokeWidth="2" />
                 {/* Rameno */}
-                <rect x="150" y="20" width="14" height="65" rx="6" fill="#FFD600" stroke="#222" strokeWidth="4" transform="rotate(-25 180 60)" />
+                <rect x="155" y="35" width="14" height="65" rx="6" fill="#FFD600" stroke="#222" strokeWidth="4" transform="rotate(20 190 60)" />
                 {/* Lžíce */}
-                <ellipse cx="160" cy="30" rx="14" ry="8" fill="#FFD600" stroke="#222" strokeWidth="4" />
-                <ellipse cx="160" cy="30" rx="7" ry="4" fill="#222" />
+                <ellipse cx="150" cy="25" rx="16" ry="10" fill="#FFD600" stroke="#222" strokeWidth="4" />
+                <ellipse cx="150" cy="25" rx="10" ry="6" fill="#222" />
               </svg>
             </div>
             <div className="mb-20 md:mb-24">
