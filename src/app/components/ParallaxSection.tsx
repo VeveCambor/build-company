@@ -26,7 +26,6 @@ const ParallaxSection = ({ bgImage, overlayColor = "rgba(0,0,0,0.5)", children }
     };
   }, []);
 
-  // Snížený efekt paralaxu na mobilních zařízeních
   const y = useTransform(scrollYProgress, [0, 1], ["0%", isMobile ? "20%" : "40%"]);
 
   return (
