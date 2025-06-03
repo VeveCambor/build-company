@@ -49,8 +49,8 @@ export default function Home() {
       <main className="snap-y snap-mandatory">
         <Hero onGetOffer={() => setModalOpen(true)} />
         <WhyUs 
-          title="Proč si vybrat právě nás?"
-          text="Jsme mezinárodní stavební firma s více než 15 lety zkušeností. Naše týmy pracují po celé Evropě a poskytují komplexní stavební řešení. Zaměřujeme se na kvalitu, bezpečnost a dodržení termínů. Naši klienti oceňují naši spolehlivost a profesionální přístup ke každému projektu."
+          title="Prečo si vybrať práve nás?"
+          text="Sme mezinárodná stavebná firma s viac než 15 rokmi skúseností. Naše týmy pracujú po celej Európe a poskytujú komplexné stavebné riešenia. Zameriavame sa na kvalitu, bezpečnosť a dodržanie termínov. Naši klienti oceňujú našu spolahlivosť a profesionálny prístup ku každému projektu."
         />
         <Services services={services} />
       </main>
